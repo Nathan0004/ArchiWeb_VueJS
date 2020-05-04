@@ -31,13 +31,5 @@ listejoueuses},
 #EffectifModule {
   background-color: #7f7f7f;
 }
-fieldset {
-  background-color: #a8c6fa;
-  opacity: 0.7;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  text-align: center;
-  margin-left: 370px;
-  margin-right: 370px;
-}
+
 </style>
