@@ -34,10 +34,11 @@ export default {
 
 <style>
 #joueuse {
-  background-color: lightgrey;
+  background-color : #a8c6fa;
   width: 300px;
+  height: 90px;
   margin : 5px auto;
-  padding : 5px;
+  padding : 1px;
 }
 
 </style>

@@ -1,13 +1,14 @@
 <template>
-  <div id="listejoueuses">
+  <div id="modulejoueuses">
     <h2>Liste des Joueuses</h2>
-    <input type="text" v-model="joueuse.firstname" />
-    <input type="text" v-model="joueuse.lastname" />
-    <button v-on:click="addjoueuse">Ajouter une Joueuse</button>
+    <div class="listejoueuse">
     <li v-for="(joueuse) in listejoueuses" :key="joueuse.id">
       <Joueuse v-bind:joueuse="joueuse" @event_updatejoueuse="UpdateJ" @event_deletejoueuse="deletejoueuse"></Joueuse>
     </li>
-    
+    </div>
+     <input type="text" v-model="joueuse.firstname" />
+    <input type="text" v-model="joueuse.lastname" />
+    <button v-on:click="addjoueuse">Ajouter une Joueuse</button>
   </div>
 </template>
 <script>
@@ -61,7 +62,14 @@ export default {
 
 
 <style>
-#listejoueuses {
+#modulejoueuses {
   background-color: #7f7f7f;
+}
+
+.listejoueuse {
+  display : flex;
+  justify-content: space-evenly;
+  flex-wrap : wrap;
+  
 }
 </style>

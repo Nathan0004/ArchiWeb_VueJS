@@ -1,13 +1,14 @@
 <template>
-  <div id="listecoachs">
+  <div id="modulecoachs">
     <h2>Liste des Coachs</h2>
-    <input type="text" v-model="coach.firstname" />
-    <input type="text" v-model="coach.lastname" />
-    <button v-on:click="addcoach">Ajouter un Coach</button>
+    <div class="listecoachs">
     <li v-for="(coach) in listecoachs" :key="coach.id">
       <Coach v-bind:coach="coach" @event_updatecoach="UpdateC" @event_deletecoach="deletecoach"></Coach>
     </li>
-    
+    </div>
+    <input type="text" v-model="coach.firstname" />
+    <input type="text" v-model="coach.lastname" />
+    <button v-on:click="addcoach">Ajouter un Coach</button>
   </div>
 </template>
 <script>
@@ -62,7 +63,13 @@ export default {
 
 
 <style>
-#listecoachs {
+#modulecoachs {
   background-color: #7f7f7f;
+}
+
+.listecoachs {
+  display : flex;
+  justify-content: space-evenly;
+  flex-wrap : wrap;
 }
 </style>

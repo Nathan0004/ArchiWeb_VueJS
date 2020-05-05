@@ -36,7 +36,7 @@ export default {
 
 <style>
 #coach {
-  background-color: lightgrey;
+  background-color : #a8c6fa;
   width: 300px;
   margin : 5px auto;
   padding : 5px;

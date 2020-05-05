@@ -30,6 +30,8 @@ listejoueuses},
 <style>
 #EffectifModule {
   background-color: #7f7f7f;
+  
 }
 
+ 
 </style>

@@ -8,7 +8,6 @@
       <router-link to="/matchs">Matchs</router-link>
       <router-view></router-view>
     </div>
-    
 
     <h2>Pour nous suivre sur les réseaux sociaux, c'est par ici !</h2>
     <a href="https://www.facebook.com/Victorious-Secret-BBFL-2140030759440919/" target="_blank">
@@ -17,7 +16,6 @@
     <a href="https://www.instagram.com/victorioussecretbbfl/" target="_blank">
       <img href class="logoreseaux" src="./assets/logoinstacopie.png" />
     </a>
-
   </div>
 </template>
 
@@ -27,11 +25,8 @@ export default {
   data() {
     return {
       msgbienvenue: "Bienvenue sur l'application Victorious Secrets"
-    }
-    
-  },
-  
-  
+    };
+  }
 };
 </script >
 
@@ -43,7 +38,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: rgb(18, 136, 151);
+  background-image: url('./assets/fond1copie.png');
 }
 
 h1,
@@ -55,8 +50,8 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-li{
-list-style-type: none; 
+li {
+  list-style-type: none;
 }
 
 a {
@@ -72,5 +67,4 @@ a {
   height: 50px;
   width: 50px;
 }
-
 </style>

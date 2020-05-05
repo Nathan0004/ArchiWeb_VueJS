@@ -1,26 +1,44 @@
 <template>
   <div id="listematchs">
     <h2>Liste des Matchs</h2>
-    <input type="text" v-model="match.titre" />
-    <input type="text" v-model="match.date" />
-    <input type="time" v-model="match.heure" />
-    <input type="text" v-model="match.adresse" />
-    <input type="text" v-model="match.matchcoach" />
-    <input type="text" v-model="match.AG" />
-    <input type="text" v-model="match.BU" />
-    <input type="text" v-model="match.AD" />
-    <input type="text" v-model="match.MG" />
-    <input type="text" v-model="match.MC" />
-    <input type="text" v-model="match.MD" />
-    <input type="text" v-model="match.DCG" />
-    <input type="text" v-model="match.DG" />
-    <input type="text" v-model="match.DCD" />
-    <input type="text" v-model="match.DD" />
-    <input type="text" v-model="match.G" />
-    <button v-on:click="addmatch">Ajouter un Match</button>
+    
     <li v-for="(match) in listematchs" :key="match.id">
       <Match v-bind:match="match" @event_updatematch="UpdateM" @event_deletematch="deletematch"></Match>
     </li>
+
+    <fieldset class="fieldsetadd">
+      <legend><strong>Ajouter un Match :</strong> </legend> 
+        <div class="infomatchadd">
+      Titre: <input type="text" v-model="match.titre" /> <br>
+      ____________________________ <br>
+      Date: <input type="date" v-model="match.date" /> <br>
+      Heure: <input type="time" v-model="match.heure" /> <br>
+      Adresse: <input type="text" v-model="match.adresse" /> <br>
+      Coach du jour: <input type="text" v-model="match.matchcoach" /> <br>
+        </div>
+        <div class="compoadd">
+          <div class="attaqueadd">
+      <input size='12' type="text" v-model="match.AG" />
+      <input size='12' type="text" v-model="match.BU" />
+      <input size='12' type="text" v-model="match.AD" /> 
+      </div>
+      <div class="milieuadd">
+      <input size='12' type="text" v-model="match.MG" />
+      <input size='12' type="text" v-model="match.MC" />
+      <input size='12' type="text" v-model="match.MD" /> 
+      </div>
+      <div class='defenseadd'>
+      <input size='12' type="text" v-model="match.DG" />
+      <input size='12' type="text" v-model="match.DCG" />
+      <input size='12' type="text" v-model="match.DCD" />
+      <input size='12' type="text" v-model="match.DD" /> 
+      </div>
+      <div class="gardienadd">
+      <input size='12' type="text" v-model="match.G" /> 
+      </div>
+      </div>
+      <button class="boutonadd" v-on:click="addmatch">Ajouter un Match</button>
+      </fieldset>
     
   </div>
 </template>
@@ -93,5 +111,38 @@ export default {
 <style>
 #listematchs {
   background-color: #7f7f7f;
+}
+
+
+
+.infomatchadd {
+  text-align : left;
+  margin-right: 30px;
+}
+
+.boutonadd {
+  height : 30px;
+  margin : auto auto;
+}
+
+.attaqueadd {
+    margin-bottom: 20px;
+    margin-top : 10px;
+}
+.milieuadd {
+    margin-bottom: 20px;
+}
+.defenseadd {
+     margin-bottom: 30px;  
+}
+
+.compoadd {
+  background-image: url("./assets/demiterraincopie.jpg");
+    background-size : 370px 180px;
+}
+
+.fieldsetadd {
+  margin : auto auto;
+  background-color : #a8adfa;
 }
 </style>
